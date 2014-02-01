@@ -69,7 +69,7 @@
             + '}'
         ;
         $('head').append('<style>'+sStylesheet+'</style>');
-        $('head').append('<link rel="stylesheet" type="text/css" href="http://potherca.github.io/CssBase/css/base.css">');
+        $('head').append('<link rel="stylesheet" type="text/css" href="http://pother.ca/CssBase/css/base.css">');
     }
     
     jQuerLoader(function($) {
