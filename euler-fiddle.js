@@ -149,7 +149,7 @@
                 , jsonpCallback : 'handleSolutionResponse'
                 , complete : function(p_oRequest, p_sStatus){
                     if(p_oRequest.statusText !== 'success'){
-                        alert(p_oRequest.statusText + ' : Could not retrieve Problem from Project Euler');
+                        alert(p_oRequest.statusText + ' : Could not retrieve Solution from Project Euler Solutions');
                     } else {
                         // The response callback will trigger our handler function
                     }
@@ -181,7 +181,7 @@
             if (p_oResponse.query.count 
                 && parseInt(p_oResponse.query.count, 10) > 0
             ) {
-                sSolutions = p_oResponse.query.results.pre.content;
+                sSolutions = p_oResponse.query.results.body;
                 aSolutions = sSolutions.split("\n");
                 
                 $.each(aSolutions, function(p_i, p_s){
