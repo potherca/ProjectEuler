@@ -142,8 +142,7 @@
                 , "async" : false
                 , "data": {
                     "q": 'select * from html where ' 
-                        + 'url="https://code.google.com/p/projecteuler-solutions/wiki/ProjectEulerSolutions"'
-                        + 'and xpath="//pre"'
+                        + 'url="https://raw.githubusercontent.com/nayuki/Project-Euler-solutions/master/Answers.txt"'
                     , "format": 'json'
                 }
                 , "dataType" : 'jsonp'
