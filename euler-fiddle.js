@@ -18,7 +18,7 @@
        you can wait for that to be loaded to the DOM and write directly to that.
 
     @FIXME: Image tags in the Euler response need to have their SRC attribute 
-            ammended to point to http://projecteuler.net
+            ammended to point to https://projecteuler.net
  */
 (function(){
 
@@ -69,7 +69,7 @@
             + '}'
         ;
         $('head').append('<style>'+sStylesheet+'</style>');
-        $('head').append('<link rel="stylesheet" type="text/css" href="http://pother.ca/CssBase/css/base.css">');
+        $('head').append('<link rel="stylesheet" type="text/css" href="https://pother.ca/CssBase/css/base.css">');
     }
     
     jQuerLoader(function($) {
@@ -84,7 +84,7 @@
         iProblemId = parseInt($Body.text(),10);
 
         $Body.html($(
-              '<h1><a href="http://projecteuler.net/problem=' + iProblemId 
+              '<h1><a href="https://projecteuler.net/problem=' + iProblemId 
             + '">Problem ' + iProblemId+ '</a></h1>'
             + '<div id="problem"></div>'
             + '<h2>My solution</h2>'
@@ -112,11 +112,11 @@
         // grab text/html nodes from euler page
         // @NOTE: projecteuler.net does not allow other origins, so we use YQL
         $.ajax({
-              "url": 'http://query.yahooapis.com/v1/public/yql'
+              "url": 'https://query.yahooapis.com/v1/public/yql'
             , "async" : false
             , "data": {
                 "q": 'select * from html where ' 
-                    + 'url="http://projecteuler.net/problem=' + iProblemId + '"'
+                    + 'url="https://projecteuler.net/problem=' + iProblemId + '"'
                     + 'and (xpath="//h2" OR xpath="//div[@class=\'problem_content\']")'
                 , "format": 'xml'
             }
@@ -138,7 +138,7 @@
             $Button.attr('disabled', 'disabled');
             
             $.ajax({
-                  "url": 'http://query.yahooapis.com/v1/public/yql'
+                  "url": 'https://query.yahooapis.com/v1/public/yql'
                 , "async" : false
                 , "data": {
                     "q": 'select * from html where ' 
