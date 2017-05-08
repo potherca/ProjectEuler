@@ -14,5 +14,5 @@ Currently the only thing of interest here is the Javascript functionality meant 
 an external resource on [JsFiddle](https://jsfiddle.net/) to make solving problems easier by pulling 
 the question into the fiddle and providing a means of validating ones answer. 
 
-Usage is simple, just include [`https://pother.ca/ProjectEuler/euler-fiddle.js`](https://pother.ca/ProjectEuler/euler-fiddle.js)
+Usage is simple, just include [`https://blog.pother.ca/ProjectEuler/euler-fiddle.js`](https://pother.ca/ProjectEuler/euler-fiddle.js)
 as an external resource and type the number of the puzzle you want to solve into the `HTML` pane.
