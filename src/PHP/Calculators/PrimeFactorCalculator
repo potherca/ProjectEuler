@@ -1,0 +1,30 @@
+<?php
+
+namespace Potherca\ProjectEuler\Calculators
+{
+    class PrimeFactorCalculator
+    {
+        final public function getPrimeFactors(int $subject): array
+        {
+            $factors = [];
+
+            $currentPrime = 2;
+            
+            $limit = gmp_strval(gmp_sqrt($subject));
+
+            while ($currentPrime < $limit) {
+            	if ($subject % $currentPrime === 0) {
+            		$factors[] = $currentPrime;
+            	}
+            	$currentPrime = gmp_strval(gmp_nextprime($currentPrime));
+            }
+
+            return $factors;
+        }
+        
+        final public function getLargestPrimeFactor(int $subject): int
+        {
+        	return end($this->getPrimeFactors($subject));
+        }
+    }
+}
