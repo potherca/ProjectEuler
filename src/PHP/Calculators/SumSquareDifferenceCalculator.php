@@ -1,26 +1,28 @@
+<?php
+
 namespace Potherca\ProjectEuler\Calculators
 {
     class SumSquareDifferenceCalculator
     {
         final public function getSumSquareDifference(int $limit): int
         {
-        	return $this->getSquareOfSums($limit) - $this->getSumOfSquares($limit);
+            $range = range(1, $limit);
+
+            return $this->getSquareOfSums($range) - $this->getSumOfSquares($range);
         }
 
-        private function getSquareOfSums(int $limit): int
+        private function getSquareOfSums(array $range): int
         {
-        	return array_sum(range(1, $limit)) ** 2;
+        	return array_sum($range) ** 2;
         }
 
-        private function getSumOfSquares(int $limit): int
+        private function getSumOfSquares(array $range): int
         {
-        	$numbers = range(1, $limit);
-
-        	$squares = array_map(function ($number) {
-        		return $number ** 2;
-        	}, $numbers);
-        	
-        	return array_sum($squares);
+        	return array_sum(
+        		array_map(function ($number) {
+        			return $number ** 2;
+        		}, $range)
+        	);
         }
     }
 }
