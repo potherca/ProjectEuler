@@ -7,12 +7,12 @@ namespace Potherca\ProjectEuler\Calculators
         	return $this->getSquareOfSums($limit) - $this->getSumOfSquares($limit);
         }
 
-        final public function getSquareOfSums(int $limit): int
+        private function getSquareOfSums(int $limit): int
         {
         	return array_sum(range(1, $limit)) ** 2;
         }
 
-        final public function getSumOfSquares(int $limit): int
+        private function getSumOfSquares(int $limit): int
         {
         	$numbers = range(1, $limit);
 
